@@ -41,9 +41,7 @@ const contaCorrenteFernando = new contaCorrente();
 contaCorrenteFernando.saldo= 5;
 contaCorrenteFernando.genciaConta= 585;
 
-const contaCorrenteRenata = new contaCorrente();
-contaCorrenteRenata.saldo= 555;
-contaCorrenteRenata.genciaConta = 55585;
+
 
 
 
