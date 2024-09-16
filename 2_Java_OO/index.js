@@ -1,30 +1,19 @@
-import { cliente }  from "./ProjetoClasses/Class/Cliente.js";
+import { Cliente } from "./ProjetoClasses/Class/Cliente.js";
 import { ContaCorrente } from "./ProjetoClasses/Class/ContaCorrente.js";
 
-const cliente1 = new cliente();
-cliente1.nome = "Ricardo";
-cliente1.cpf= 32500579832;
 
+const cliente1 = new Cliente( "Ricardo", 11122233309 ); // Devido ao construtor na classe Cliente, excluido as clinhas CLiente1.nome e cpdf =..
+const contaCorrenteRicardo = new ContaCorrente(cliente1, 15056); // exluido as linhas contaRicardo.agencia e cliente = ...; construtor aba cliente
 
-const cliente2 = new cliente();
-cliente2.nome= "Alice";
-cliente2.cpf= 766725812;
+contaCorrenteRicardo.depositar(500);
+contaCorrenteRicardo.sacar(20);
+console.log(cliente1, contaCorrenteRicardo);
 
-const contaCorrenteRicado = new ContaCorrente();
-const contaCorrenteAlice = new ContaCorrente();
+let valor =200;
 
+const cliente2 = new Cliente( "Alice", 856958855 ); // Devido ao construtor na classe Cliente, excluido as clinhas CLiente1.nome e cpdf =..
+const contaCorrentAlice = new ContaCorrente(cliente1, 15056); // exluido as linhas contaRicardo.agencia e cliente = ...; construtor aba cliente
 
-
-contaCorrenteRicado._saldo=100;
-contaCorrenteRicado.agencia= 555;
-//console.log("Saldo", contaCorrenteRicado._saldo,   "Agencia", contaCorrenteRicado.agencia);
-const valorSacado =  contaCorrenteRicado.sacar(1);
-console.log(valorSacado);
-
-
-
-
-//console.log("Saldo", contaCorrenteRicado._saldo,   "Agencia", contaCorrenteRicado.agencia);
-//contaCorrenteRicado.depositar(1);
-//console.log("Saldo", contaCorrenteRicado._saldo,   "Agencia", contaCorrenteRicado.agencia);
-
+contaCorrentAlice.depositar(150);
+contaCorrentAlice.sacar(30);
+console.log(cliente2, contaCorrentAlice);
