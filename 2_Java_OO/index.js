@@ -16,4 +16,4 @@ const contaCorrentAlice = new ContaCorrente(cliente1, 15056); // exluido as linh
 
 contaCorrentAlice.depositar(150);
 contaCorrentAlice.sacar(30);
-console.log(cliente2, contaCorrentAlice);
+console.log(ContaCorrente.numeroContas);

@@ -1,8 +1,11 @@
 import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
+    
     agencia;
     _cliente;
+    static numeroContas = 0;  // variavel contadora  estatico 
+
 
     set cliente(novoValor) {
         if (novoValor instanceof Cliente) {  // se o novo valor for uma instacia de cliente, atribui valor, se nao 
@@ -22,9 +25,10 @@ export class ContaCorrente {
         return this._saldo;
     }
 
-    constructor(cliente, agencia){
+    constructor(cliente, agencia) {
         this.cliente = cliente;
         this.agencia = agencia;
+        ContaCorrente.numeroContas += 1;   // variavel contadora  nao pode colocar this, pois nao sera Essa conta
     }
 
 
