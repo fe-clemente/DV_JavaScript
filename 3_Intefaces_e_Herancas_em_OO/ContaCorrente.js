@@ -9,7 +9,7 @@ export class ContaCorrente extends Conta{ // extends herança
 
     //sobreescrevendo o comportamento de sacar
     sacar(valor) {
-        let taxa = 1.1;
+        let taxa = 1.1;  // valor da taxa //  1 é o multipicador ou seja valor sacador x 1
         return this._sacar(valor, taxa);
     }
 }
