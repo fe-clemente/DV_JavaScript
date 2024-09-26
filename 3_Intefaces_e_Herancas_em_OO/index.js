@@ -9,6 +9,6 @@ diretor.cadastrarSenha("926695");
 const gerente = new Gerente("Ricardo", 50000, 889486415);
 
 
-const estaLogado = SistemaAutenticacao.login(diretor, "926695");// const esta logado é retorno do  que a funcao SistemaAuten.. der.
+const estaLogado = SistemaAutenticacao.login(diretor, "9266");// const esta logado é retorno do  que a funcao SistemaAuten.. der.
 
 console.log(estaLogado);
