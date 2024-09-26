@@ -1,18 +1,14 @@
-import {Cliente} from "./Cliente.js";
-import {ContaCorrente} from "./ContaCorrente.js";
-import { ContaPoupanca } from "./ContaPoupanca.js";
-import { ContaSalario } from "./ContaSalario.js";
-import { Conta } from "./Conta.js";
-
-const cliente1 = new Cliente("Ricardo", 11122233309);
-
-const contaCorrenteRicardo = new ContaCorrente( cliente1, 1001);
-const contaPoupanca = new ContaPoupanca(50, cliente1, 1001);
-const contaSalario = new ContaSalario(cliente1);
-
-contaSalario.depositar(145);
-contaSalario.sacar(1); // metodo abstrato da conta, nao pode ser chamado, entao Erro
+import { Gerente } from "./Funcionario/Gerente.js";
+import { Diretor } from "./Funcionario/Diretor.js";
+import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
 
 
 
-console.log(contaSalario);
+const diretor = new Diretor("Rodrigo", 1000000, 123456789);
+diretor.cadastrarSenha("926695");
+const gerente = new Gerente("Ricardo", 50000, 889486415);
+
+
+const estaLogado = SistemaAutenticacao.login(diretor, "926695");// const esta logado é retorno do  que a funcao SistemaAuten.. der.
+
+console.log(estaLogado);
