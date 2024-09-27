@@ -1,7 +1,13 @@
+/* 
+
+
+Ser autenticavel significa ter o metodo autenticar
+
+*/
+
+
 export class SistemaAutenticacao {
-    static login(funcionario, senha) {   // estatic, verifica o funcionario e valor da senha
-        return funcionario.senha == senha;  // expressao boleane se o que retorna, devolve para o login
-
-
+    static login(autenticavel, senha) {   // estatic, verifica o funcionario e valor da senha
+        return autenticavel.autenticar(senha) ;  // metodo
     }
 }

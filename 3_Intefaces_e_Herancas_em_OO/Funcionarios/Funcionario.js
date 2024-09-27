@@ -14,6 +14,10 @@ export class Funcionario {
         return this._senha;  // mantem o encapsulamento da senha sem ninguem possa atribuir, apenas em cadastran senha
     }
 
+    autenticar (senha){
+        return senha == this._senha;
+    }
+
     cadastrarSenha(senha) {
         this._senha = senha;     // incia com o senha do construtor em cima
     }
