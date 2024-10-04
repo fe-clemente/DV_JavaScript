@@ -15,11 +15,12 @@ gerente.cadastrarSenha("444747");
 
 
 const cliente = new Cliente("Selma", 5666, "456");   // senha esta passando no construtor esta diferente
-
-
 const diretorEstaLogado = SistemaAutenticacao.login(diretor, "926695");  // const esta logado é retorno do  que a funcao SistemaAuten.. der.
 const gerenteEstaLogado = SistemaAutenticacao.login(gerente, "444747");
+
+
 const clienteEstalogado = SistemaAutenticacao.login(cliente, "456");
+
 
 
 console.log(gerenteEstaLogado, diretorEstaLogado, clienteEstalogado);
